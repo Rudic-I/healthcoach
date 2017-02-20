@@ -6,26 +6,29 @@
 	<title>Ashley Graff</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="icon" type="image/png" href="http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/09/cropped-favicon-32x32.png">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oregano" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<a href="index.html"><img id="logo" src="http://healthcoach.stylemixthemes.com/wp-content/themes/healthcoach/assets/images/tmp/logo_w.png"></a>
-		<nav>
-			<ul>
-				<li><a href="home.html">HOME</a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="services.html">SERVICES</a></li>
-				<li><a href="blog.html">BLOG</a></li>
-				<li><a href="events.html">EVENTS</a></li>
-				<li><a href="pages.html">PAGES</a></li>
-				<li><a href="stories.html">STORIES</a></li>
-				<li><a href="shop.html">SHOP</a></li>
-				<li><a href="#Search"><i class="fa fa-search nav-img" aria-hidden="true"></i></a></li>
-				<li><a href="cart.html"><i class="fa fa-shopping-cart nav-img" aria-hidden="true"></i></a></li>
-			</ul>
-		</nav>
+		<div class="nav-wrap">
+			<a href="index.html"><img id="logo" src="http://healthcoach.stylemixthemes.com/wp-content/themes/healthcoach/assets/images/tmp/logo_w.png"></a>
+			<nav>
+				<ul>
+					<li><a href="home.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="services.html">SERVICES</a></li>
+					<li><a href="blog.html">BLOG</a></li>
+					<li><a href="events.html">EVENTS</a></li>
+					<li><a href="pages.html">PAGES</a></li>
+					<li><a href="stories.html">STORIES</a></li>
+					<li><a href="shop.html">SHOP</a></li>
+					<li><a href="#Search"><i class="fa fa-search nav-img" aria-hidden="true"></i></a></li>
+					<li><a href="cart.html"><i class="fa fa-shopping-cart nav-img" aria-hidden="true"></i></a></li>
+				</ul>
+			</nav>
+		</div>
 		<a href="#"><i id="burger" class="fa fa-bars"></i></a>
 		<div class="clear"></div>
 		<img id="headerimg" src="http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/09/slider-1-image-min.png">
@@ -44,7 +47,7 @@
 					<i class="fa fa-cutlery fa-3x whc-icon" aria-hidden="true"></i>
 					<h4>Nutrition Strategies</h4>
 					<p class="hidden">Healthy diet for body as well as for mind.</p>
-					<span class="dots">. . .</span>
+					<i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
 				</a>
 				</article>
 			</li>
@@ -53,7 +56,7 @@
 					<i class="fa fa-bicycle fa-3x whc-icon" aria-hidden="true"></i>
 					<h4>Workout Routines</h4>
 					<p class="hidden">Taking care of your body is important.</p>
-					<span class="dots">. . .</span>
+					<i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
 				</a>
 				</article>
 			</li>
@@ -62,7 +65,7 @@
 					<i class="fa fa-heartbeat fa-3x whc-icon" aria-hidden="true"></i>
 					<h4>Individual Support</h4>
 					<p class="hidden">More of a friend than a health coach.</p>
-					<span class="dots">. . .</span>
+					<i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
 				</a>
 				</article>
 			</li>
@@ -71,7 +74,7 @@
 					<i class="fa fa-hourglass-half fa-3x whc-icon" aria-hidden="true"></i>
 					<h4>First-Hand Advice</h4>
 					<p class="hidden">Broad experience is always a bonus.</p>
-					<span class="dots">. . .</span>
+					<i class="fa fa-ellipsis-h fa-lg" aria-hidden="true"></i>
 				</a></article>
 			</li>
 		</ul>
@@ -197,17 +200,17 @@
 	</section>
 	<section id="success-stories">
 		<h2><a href="success-stories.html">Success Stories</a></h2>
-		<div id="before-container">
-			<img src="http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/07/image-group_03-250x223.png">
-			<br>
-			<!-- <div class="clear"></div> -->
-			<span class="spantext">BEFORE</span>
-		</div>
-		<div id="after-container">
-			<img src="http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/07/image-group_05-250x223.jpg">
-			<!-- <div class="clear"></div> -->
-			<br>
-			<span class="spantext">AFTER</span>
+		<div id="success-stories-imgs">
+			<div id="before">
+				<img src="http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/07/image-group_03-250x223.png">
+				<br>
+				<span class="spantext">BEFORE</span>
+			</div>
+			<div id="after">
+				<img src="http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/07/image-group_05-250x223.jpg">
+				<br>
+				<span class="spantext">AFTER</span>
+			</div>
 		</div>
 		<div id="success-stories-text">
 			<h4><a href="linda-mayers.html">Linda Mayers Lost 80 Pounds and 4 Sizes</a></h4>
@@ -220,8 +223,10 @@
 	</section>
 	<div class="clear"></div>
 	<section id="form">
-		<h3>Request a free consultation</h3>
-		<p>It's time to take care of your health now! And you see this guest will visit the club.</p>
+		<div id="form-bg">
+			<h3>Request a free consultation</h3>
+			<p>It's time to take care of your health now! And you see this guest will visit the club.</p>
+		</div>
 		<form action="contact.html">
 			<input type="text" name="name" class="personal-info" placeholder="Name">
 			<input type="text" name="email" class="personal-info" placeholder="E-mail">
@@ -274,18 +279,20 @@
 			<section id="instagram">
 				<h4>INSTAGRAM</h4>
 				<ul>
-					<li><a href=""><img src=""></a></li>
-					<li><a href=""><img src=""></a></li>
-					<li><a href=""><img src=""></a></li>
-					<li><a href=""><img src=""></a></li>
-					<li><a href=""><img src=""></a></li>
-					<li><a href=""><img src=""></a></li>
+					<li><a href="#"><img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/927389_1584316158458256_1070721528_n.jpg"></a></li>
+					<li><a href="#"><img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/10802742_1532314993678080_41150923_n.jpg?ig_cache_key=ODUyNjk3MjIxNDQzMjkxOTk2.2"></a></li>
+					<li><a href="#"><img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/10684276_1502615996647050_939650975_n.jpg"></a></li>
+					<li><a href="#"><img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/10683836_360900004077941_1816947628_n.jpg?ig_cache_key=ODA5OTU4OTE5NjcwMDA4MDQw.2"></a></li>
+					<li><a href="#"><img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/10693711_718036284953312_655858421_n.jpg"></a></li>
+					<li><a href="#"><img src="https://scontent.cdninstagram.com/t51.2885-15/s150x150/e15/10665923_1626092244284190_1727314494_n.jpg"></a></li>
 				</ul>
 			</section>
 		</div>
 		<div class="info">
-			<p id="copy">(C) 2015 Health Coach</p>
-			<p>Get Healthy (C) Fit with StylemixThemes</p>
+			<div class="info-wrap">
+				<p>(C) 2015 Health Coach</p>
+				<p>Get Healthy (C) Fit with StylemixThemes</p>
+			</div>
 		</div>
 	</footer>
 </body>
