@@ -5,10 +5,12 @@
 	text-decoration: none;
 	box-sizing: border-box;
 }
+
 .clear {
 	clear: both;
 }
-									/***Header***/
+
+/***** Header *****/
 header {
 	background-image: url("http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/09/slider_1_bg_01-min.jpg");
 	background-repeat: no-repeat;
@@ -46,16 +48,16 @@ nav ul li a {
 	color: white;
 	font-family: "Open+Sans", sans-serif;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 14px;
+}
+#burger {
+	display: none;
 }
 #headerimg {
 	width: 90%;
 	position: absolute;
 	left: -15%;
 	top: 20%;
-}
-#burger {
-	display: none;
 }
 h1 {
 	font-family: "Oregano";
@@ -91,8 +93,8 @@ p {
 	background-color: white;
 	color: #2acd35;
 }
-									/***End of header***/
-									/***S1 - why-health-coach***/
+/***** End of header *****/
+/***** S1 - why-health-coach *****/
 #why-health-coach {
 	position: relative;
 	margin-top: 20px;
@@ -128,7 +130,7 @@ p {
 #lista li {
 	display: inline-block;
 	width: 20%;
-	height 220px;
+	height: 220px;
 	position: relative;
 	border: 1px solid #999;
 	margin: 0px 20px;
@@ -182,8 +184,8 @@ p {
 #section1-ending a {
 	color: #2acd35;
 }
-									/***End S1 why-health-coach***/
-									/***S2 - don't wait tomorrow***/
+/***** End S1 why-health-coach *****/
+/***** S2 - not tomorrow *****/
 #not-tomorrow {
 	margin-top: 20px;
 	background-color: #f5f4f3;
@@ -255,8 +257,8 @@ p {
 .more-info {
 	display: none;
 }
-										/***End S2 - don't wait tomorrow***/
-										/***S3 - 3 months***/
+/***** End S2 - not tomorrow *****/
+/***** S3 - 3 months *****/
 #months {
 	background-image: url("http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/08/info-block-bg-1-min.jpg");
 	background-size: cover;
@@ -288,8 +290,8 @@ h3 {
 	background-color: #ffffff;
 	color: #2acd35;
 }
-										/***End S3 - 3 months***/
-										/***S4 - news & articles***/
+/***** End S3 - 3 months *****/
+/***** S4 - news & articles *****/
 #news h2 {
 	text-align: center;
 	font-family: "Oregano";
@@ -331,6 +333,9 @@ h3 {
 	margin: 10px 10px 30px;
 	border-bottom: 1px solid lightgrey;
 }
+#news ul li article {
+	position: relative;
+}
 #news img {
 	width: 100%;
 	height: 200px;
@@ -363,8 +368,8 @@ h3 {
 	bottom: 0;
 	padding: 20px 10px;
 }
-										/***End S4 - news & articles***/
-										/***S5 - coffees & teas***/
+/***** End S4 - news & articles *****/
+/***** S5 - coffees & teas *****/
 #coffees-and-teas {
 	background-image: url("http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/08/block-info-bg-2_02-min.jpg?id=1836");
 	background-repeat: no-repeat;
@@ -382,8 +387,8 @@ h3 {
 	margin-bottom: 60px;
 	border: 2px solid white;
 }
-										/***End S5 - coffees & teas***/
-										/***S6 - success stories***/
+/***** End S5 - coffees & teas *****/
+/***** S6 - success stories *****/
 #success-stories h2 {
 	text-align: center;
 	font-family: "Oregano";
@@ -455,8 +460,9 @@ h3 {
 	text-decoration: none;
 	color: #2acd35;
 	font-family: "Open Sans", sans-serif;
-}										/***End S6 - success stories***/
-										/***S7 - form***/
+}
+/***** End S6 - success stories *****/
+/***** S7 - form *****/
 #form {
 	text-align: center;
 }
@@ -522,8 +528,8 @@ textarea {
 	border: 1px solid #333;
 	cursor: pointer;
 }
-											/***End S7 - form***/
-											/***footer***/
+/***** End S7 - form *****/
+/***** footer *****/
 footer {
 	background-color: #222426;
 	margin-top: 60px;
@@ -627,12 +633,10 @@ footer p {
 .info p:nth-child(2){
 	float: right;
 }
-										/***End footer***/
-										/***@media***/
+/***** End footer *****/
 
 
-
-
+/***** @media *****/
 @media screen and (max-width: 1036px) {
 	header {
 		height: 80vh;
