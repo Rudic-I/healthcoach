@@ -1,20 +1,9 @@
 * {
 	margin: 0px;
 	padding: 0px;
-}
-ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-a {
+	list-style: none;
 	text-decoration: none;
+	box-sizing: border-box;
 }
 .clear {
 	clear: both;
@@ -26,49 +15,51 @@ header {
 	background-size: cover;
 	overflow: hidden;
 	position: relative;
+	height: 100vh;
 }
 .nav-img {
 	padding: 5px;
 	border: 1px solid white;
 	border-radius: 100%;
 }
-#logo {
-	margin-left: 40px;
-	padding-top: 10px;
-	padding-left: 80px;
-	width: 13%;
+.nav-wrap {
+	width: 85%;
+	margin: auto;
+	padding-top: 30px;
+}
+#logo-white {
+	width: 20%;
 	float: left;
 }
+#logo-black {
+	display: none;
+}
 nav ul {
-	display: inline-block;
-	margin-top: 30px;
-	margin-left: 70px;
+	float: right;
+	margin-top: 20px;
 }
 nav ul li {
 	display: inline-block;
-	float: left;
-	padding-left: 20px;
+	margin-left: 20px;
 }
 nav ul li a {
-	text-decoration: none;
 	color: white;
 	font-family: "Open+Sans", sans-serif;
 	font-weight: bold;
 	font-size: 12px;
 }
 #headerimg {
-	width: 80%;
-	float: left;
-	margin-left: -200px;
-	margin-bottom: -220px;
-	margin-top: 40px;
+	width: 90%;
+	position: absolute;
+	left: -15%;
+	top: 20%;
 }
 #burger {
 	display: none;
 }
 h1 {
 	font-family: "Oregano";
-	font-size: 50px;
+	font-size: 65px;
 	font-weight: 400;
 	color: white;
 }
@@ -79,21 +70,22 @@ p {
 	color: white;
 }
 #introduction {
-	display: inline-block;
 	position: relative;
-	left: -20%;
+	width: 50%;
+	left: 55%;
 	top: 150px;
 	color: white;
 }
 #introduction a {
-	text-decoration: none;
+	display: inline-block;
 	color: white;
 	font-family: "Open Sans", sans-serif;
 	font-size: 15px;
 	font-weight: bold;
-	padding: 15px 30px;
+	padding: 10px 30px;
 	border: 2px solid white;
 	border-radius: 30px;
+	margin-top: 20px;
 }
 #introduction a:hover {
 	background-color: white;
@@ -102,7 +94,6 @@ p {
 									/***End of header***/
 									/***S1 - why-health-coach***/
 #why-health-coach {
-	height: 400px;
 	position: relative;
 	margin-top: 20px;
 }
@@ -110,41 +101,46 @@ p {
 	text-align: center;
 	font-family: "Oregano";
 	font-weight: 400;
-	font-size: 2em;
+	font-size: 40px;
 	position: relative;
 	z-index: 100;
 }
 #why-health-coach h2:before {
 	content: " ";
-	width: 139px;
-	height: 139px;
+	width: 140px;
+	height: 140px;
 	display: block;
 	border-radius: 50%;
 	background-color: white;
 	border: 1px solid white;
 	border-bottom: 2px solid #2acd35;
 	position: absolute;
-	top: -120%;
-	left: 45%;
+	top: -110%;
+	left: calc(50% - 70px);
 	z-index: -100;
 }
 #lista {
 	text-align: center;
-	width: 100%;
-	height: 250px;
-	padding-top: 20px;
-	position: absolute;
-	transform: translate(0%, 25%);  /* Standard syntax */
-   -ms-transform: translate(0%, 25%); /* IE 9 */
-   -webkit-transform: translate(0%, 25%); /* Safari */
+	width: 90%;
+	margin: 60px auto 30px;
+	padding: 25px 0px;
 }
 #lista li {
 	display: inline-block;
-	width: 10%;
-	text-align: center;
-	border: 1px solid gray;
+	width: 20%;
+	height 220px;
+	position: relative;
+	border: 1px solid #999;
 	margin: 0px 20px;
-	padding: 20px 50px;
+}
+#lista li article {
+	position: absolute;
+	width: 100%;
+	height: 220px;
+	left: 0;
+	top: 0;
+	text-align: center;
+	padding: 10px 20px;
 }
 #why-health-coach h4 {
 	font-family: "Open Sans", sans-serif;
@@ -155,25 +151,22 @@ p {
 }
 .hidden {
 	display: none;
-	color: #444444;
-	font-size: 12px;
 }
-.dots {
-	font-size: 28px;
+.fa-ellipsis-h {
 	color: #444444;
 	font-family: "Open Sans", sans-serif;
 }
-
-.why-coach-article:hover .hidden {
+#lista li:hover .hidden {
 	display: block;
+	color: #444444;
+	font-size: 12px;
 }
-.why-coach-article:hover .dots {
+#lista li:hover .fa-ellipsis-h {
 	display: none;
 }
 #lista li:hover {
-	box-shadow: 0 0 10px gray;
+	box-shadow: 0 0 10px #999;
 }
-
 .whc-icon {
 	color: #2acd35;
 	font-size: 4em;
@@ -195,8 +188,33 @@ p {
 	margin-top: 20px;
 	background-color: #f5f4f3;
 	padding-bottom: 60px;
-	height: 400px;
 	position: relative;
+}
+#not-tomorrow h2 {
+	text-align: center;
+	font-family: "Oregano";
+	font-weight: 400;
+	font-size: 40px;
+	padding-top: 20px;
+	z-index: 100;
+	position: relative;
+}
+#not-tomorrow h2 a {
+	color: #444444;
+}
+#not-tomorrow h2:before {
+	content: " ";
+	width: 140px;
+	height: 140px;
+	display: block;
+	border-radius: 50%;
+	background-color: #f5f4f3;
+	border: 1px solid #f5f4f3;
+	border-bottom: 2px solid #2acd35;
+	position: absolute;
+	top: -40%;
+	left: calc(50% - 70px);
+	z-index: -100;
 }
 .not-tomorrow-img {
 	width: 100%;
@@ -205,16 +223,12 @@ p {
 .not-tomorrow-icon {
 	padding-bottom: 10px;
 	color: #2acd35;
-
 }
 #not-tomorrow ul {
 	text-align: center;
 	width: 80%;
-	margin: 40px 0px;
-	position: absolute;
-	transform: translate(12%, 0%);  /* Standard syntax */
-   -ms-transform: translate(12%, 0%); /* IE 9 */
-   -webkit-transform: translate(12%, 0%); /* Safari */
+	width: 90%;
+	margin: 60px auto 30px;
 }
 #not-tomorrow ul li {
 	display: inline-block;
@@ -229,50 +243,17 @@ p {
 	margin-top: -90px;
 	padding: 20px;
 }
-#not-tomorrow h2 {
-	margin-bottom: 40px;
-	padding-top: 20px;
-	z-index: 100;
-	position: relative;
-}
-#not-tomorrow h2 a {
-	color: #444444;
-}
-#not-tomorrow h2:before {
-	content: " ";
-	width: 139px;
-	height: 139px;
-	display: block;
-	border-radius: 50%;
-	background-color: #f5f4f3;
-	border: 1px solid #f5f4f3;
-	border-bottom: 2px solid #2acd35;
-	position: absolute;
-	top: -60%;
-	left: 45%;
-	z-index: -100;
-}
-
 #not-tomorrow h4 {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	padding-bottom: 20px;
 }
-
 #not-tomorrow h4 a {
 	color: #444444;
 }
-
 .more-info {
 	display: none;
-}
-h2 {
-	text-align: center;
-	font-family: "Oregano";
-	font-size: 2em;
-	font-weight: 400;
-	color: #444444;
 }
 										/***End S2 - don't wait tomorrow***/
 										/***S3 - 3 months***/
@@ -280,6 +261,7 @@ h2 {
 	background-image: url("http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/08/info-block-bg-1-min.jpg");
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: center;
 	padding: 120px;
 }
 h3 {
@@ -294,7 +276,6 @@ h3 {
 	font-size: 15px;
 }
 #months a {
-	text-decoration: none;
 	color: white;
 	font-family: "Open Sans", sans-serif;
 	font-size: 15px;
@@ -303,22 +284,51 @@ h3 {
 	border: 2px solid white;
 	border-radius: 30px;
 }
+#months a:hover {
+	background-color: #ffffff;
+	color: #2acd35;
+}
 										/***End S3 - 3 months***/
 										/***S4 - news & articles***/
+#news h2 {
+	text-align: center;
+	font-family: "Oregano";
+	font-weight: 400;
+	font-size: 40px;
+	position: relative;
+	z-index: 100;
+	padding-top: 10px;
+}
+#news h2 a {
+	color: #444444;
+}
+#news h2:before {
+	content: "  ";
+	width: 140px;
+	height: 140px;
+	display: block;
+	border: 1px solid white;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	top: -60%;
+	left: calc(50% - 70px);
+	z-index: -100;
+	border-bottom: 2px solid #2acd35;
+}
 #news p {
 	display: none;
 }
 #news ul {
 	width: 80%;
-	margin-left: 120px;
+	margin: 60px auto;
+	text-align: center;
 }
 #news ul li {
 	display: inline-block;
-	float: left;
 	width: 30%;
 	text-align: center;
-	margin-left: 30px;
-	margin-top: 40px;
+	margin: 10px 10px 30px;
 	border-bottom: 1px solid lightgrey;
 }
 #news img {
@@ -337,39 +347,21 @@ h3 {
 	font-weight: bold;
 	padding-top: 20px;
 }
-.newslist li:hover {
+#news article:hover {
 	box-shadow: 0 0 10px gray;
 }
-.newslist {
-	margin-top: 40px;
+#news article:hover p {
+	display: block;
+	color: #999;
+	font-size: 12px;
+	margin-top: 5px;
 }
 .info-over-image {
 	background-color: white;
-	position: relative;
-	margin-top: -60px;
-	padding: 20px;
-}
-#news h2 {
-	position: relative;
-	z-index: 100;
-	margin-top: 10px;
-}
-#news h2 a {
-	color: #444444;
-}
-#news h2:before {
-	content: "  ";
-	width: 139px;
-	height: 139px;
-	display: block;
-	border: 1px solid white;
-	border-radius: 50%;
-	background-color: white;
 	position: absolute;
-	top: -130%;
-	left: 45%;
-	z-index: -100;
-	border-bottom: 2px solid #2acd35;
+	width: 100%;
+	bottom: 0;
+	padding: 20px 10px;
 }
 										/***End S4 - news & articles***/
 										/***S5 - coffees & teas***/
@@ -392,46 +384,67 @@ h3 {
 }
 										/***End S5 - coffees & teas***/
 										/***S6 - success stories***/
-#success-stories {
-	margin-top: 40px;
+#success-stories h2 {
+	text-align: center;
+	font-family: "Oregano";
+	font-weight: 400;
+	font-size: 40px;
 	position: relative;
+	padding-top: 10px;
+	z-index: 100;
+}
+#success-stories h2:before {
+	content: "  ";
+	width: 140px;
+	height: 140px;
+	display: block;
+	border: 1px solid white;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	top: -60%;
+	left: calc(50% - 70px);
+	z-index: -100;
+	border-bottom: 2px solid #2acd35;
 }
 #success-stories h2 a {
 	text-decoration: none;
 	color: #444444;
 }
-#before-container {
-	top: 100px;
-	left: 90px;
+#success-stories-imgs {
+	width: 40%;
 	float: left;
-	padding: 20px;
-	border: 1px solid lightgrey;
-	background-color: white;
-	position: absolute;
-	z-index: -1;
+	position: relative;
+	left: 5%;
+	margin-top: 50px;
 }
-#after-container {
-	margin-left: 300px;
-	margin-top: 120px;
-	padding: 20px;
+#before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding:10px;
+	text-align: center;
 	border: 1px solid lightgrey;
-	background-color: white;
-	display: inline-block;
-	float: left;
+	background-color: #ffffff;
+}
+#after {
+	position: absolute;
+	left: 30%;
+	top: 60px;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid lightgrey;
+	background-color: #ffffff;
 }
 .spantext {
-	text-align: center;
 	font-family: "Oregano";
 	color: #2acd35;
-	padding-left: 40%;
 }
-
 #success-stories-text {
 	display: inline-block;
-	float: left;
-	width: 40%;
-	margin-top: 120px;
-	margin-left: 70px;
+	float: right;
+	width: 50%;
+	margin: 100px 30px 100px 0px;
 }
 #success-stories p {
 	color: #444444;
@@ -442,35 +455,18 @@ h3 {
 	text-decoration: none;
 	color: #2acd35;
 	font-family: "Open Sans", sans-serif;
-}
-#success-stories h2 {
-	position: relative;
-	z-index: 100;
-	margin-top: -35px;
-}
-#success-stories h2:before {
-	content: "  ";
-	width: 139px;
-	height: 139px;
-	display: block;
-	border: 1px solid white;
-	border-radius: 50%;
-	background-color: white;
-	position: absolute;
-	top: -130%;
-	left: 45%;
-	z-index: -100;
-	border-bottom: 2px solid #2acd35;
-}
-										/***End S6 - success stories***/
+}										/***End S6 - success stories***/
 										/***S7 - form***/
 #form {
+	text-align: center;
+}
+#form-bg {
 	margin-top: 40px;
 	background-image: url("http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/08/Untitled-2_02-min.jpg?id=1838");
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
-	text-align: center;
 	padding-top: 50px;
+	padding-bottom: 100px;
 }
 #form p {
 	padding-top: 20px;
@@ -480,18 +476,31 @@ form {
 	border: 1px solid white;
 	border-radius: 8px;
 	background-color: white;
-	width: 80%;
-	margin: auto;
-	padding-top: 15px;
+	width: 90%;
+	margin: -80px auto 0px;
+	padding: 30px;
 }
-.personal-info {
-	width: 25%;
+input[type='text'] {
+	width: 30%;
 	padding: 10px;
-	margin: 20px;
+	margin-bottom: 20px;
 	border: 2px solid lightgrey;
+	outline: none;
+}
+input[type='text']:nth-child(1){
+	float: left;
+}
+input[type='text']:nth-child(3){
+	float: right;
+}
+input[type='text']:focus, textarea:focus {
+	outline: 2px solid #2acd35;
+}
+textarea {
+	padding: 15px;
 }
 .contact-text {
-	width: 90%;
+	width: 100%;
 	border: 2px solid lightgrey;
 	margin-bottom: 20px;
 }
@@ -511,17 +520,20 @@ form {
 .submit-button:hover {
 	background-color: #333;
 	border: 1px solid #333;
+	cursor: pointer;
 }
 											/***End S7 - form***/
 											/***footer***/
 footer {
-	background-color: black;
+	background-color: #222426;
 	margin-top: 60px;
 }
 #shop {
-	width: 80%;
+	width: 90%;
 	margin: auto;
 	background-color: #333;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 #shop img {
 	float: left;
@@ -563,10 +575,9 @@ footer p {
 }
 #about-us, #find-us, #pages, #instagram {
 	display: inline-block;
-	width: 20%;
+	width: 24%;
 	margin-top: 40px;
 	padding-right: 30px;
-	margin-right: 15px;
 	vertical-align: text-top;
 }
 #about-us h4, #find-us h4, #pages h4, #instagram h4 {
@@ -576,7 +587,7 @@ footer p {
 	font-size: 13px;
 }	
 .shop-wrapper {
-	width: 80%;
+	width: 90%;
 	margin: auto;
 	padding-bottom: 30px;
 }
@@ -584,18 +595,37 @@ footer p {
 	float: left;
 	padding-right: 20px;
 }
+#pages ul {
+	column-count: 2;
+}
+#pages ul li {
+	font-size: 13px;
+}
+#pages ul li i{
+	font-size: 8px;
+}
+#instagram {
+	padding-right: 0px;
+	margin-right: 0px;
+}
+#instagram img {
+	width: 32%;
+	float: left;
+	padding: 0px 10px 10px 0px;
+}
 .info {
 	background-color: #333;
-	margin: auto;
-	text-align: center;
 }
-
+.info-wrap {
+	width: 90%;
+	margin: auto;
+}
 .info p {
 	display: inline-block;
 	padding: 30px 0px 30px 0px;
 }
-#copy {
-	padding-right: 45%;
+.info p:nth-child(2){
+	float: right;
 }
 										/***End footer***/
 										/***@media***/
@@ -603,720 +633,208 @@ footer p {
 
 
 
-@media screen and (min-width: 600px) and (max-width: 768px) {
-	
-										/***header***/
+@media screen and (max-width: 1036px) {
 	header {
-		height: 300px;
+		height: 80vh;
 	}
-
-	#introduction {
-		width: 300px;
-		position: absolute;
-		left: 30%;
-		top: 110px;
-	}
-
-	#introduction h1 {
-		font-size: 30px;
-	}
-
-	#introduction p {
-		font-size: 11px;
-	}
-
-	#introduction a {
-		font-weight: 100;
-		padding: 3px 12px;
-	}
-
-	#about-me {
-		margin-top: -20px;
-	}
-
 	nav {
 		display: none;
 	}
-
 	#burger {
 		display: block;
 		float: right;
 		text-decoration: none;
-		color: white;
-		margin-right: 15px;
-		margin-top: 15px;
-	}
-									/***End of header***/
-									/***S1 - why health coach***/
-
-	#why-health-coach {
-		height: 1100px;
-		padding-bottom: 0px;
-		background-color: #fff;
-	}
-	#why-health-coach h2:before {
-		left: 40%;
-	}
-
-	#section1-ending {
-		margin-bottom: 40px;
-	}
-
-	#lista li {
-		width: 93%;
-		margin: auto;
-		margin-bottom: 20px;
-		padding: 10px 10px;
-	}
-
-									/***End S1 - why health coach***/
-									/***S2 - don't wait tomorrow***/
-
-	#not-tomorrow {
-		height: 1550px;
-	}
-
-	#not-tomorrow ul {
-		width: 95%;
-		margin: auto;
+		color: #2acd35;
+		margin-right: 45px;
 		margin-top: -50px;
-		transform: translate(3%, 10%);  /* Standard syntax */
-   		-ms-transform: translate(3%, 10%); /* IE 9 */
-   		-webkit-transform: translate(3%, 10%); /* Safari */
 	}
-
-
-	#not-tomorrow ul li {
-		width: 80%;
-		margin-bottom: 20px;
-	}
-
-	#not-tomorrow h2 {
-		font-size: 1.8em;
-	}
-
-	#not-tomorrow h2:before {
-	left: 40%;
-	}
-
-									/***End S2 don't wait tomorrow***/
-									/***S3 - 3 months***/
-
-	#months {
-		height: 350px;
-		background-position: center;
-		background-attachment: initial;
-		position: relative;
-		padding: 100px 0px 0px 30px;
-	}
-
-	#months-text {
-		position: absolute;
-		width: 95%;
-	}
-
-	#months h3 {
-		font-size: 40px;
-		margin-bottom: 20px;
-		font-weight: 400;
-	}
-
-	#months p {
-		margin-bottom: 40px;
-		font-size: 14px;
-		color: white;
-		font-weight: 400;
-	}
-
-									/***End S3 - 3 months***/
-									/***S4 - news & articles***/
-
-	#news {
-		padding-bottom: 60px;
-		height: 2400px;
-	}
-
-	#news h2 {
-		font-size: 1.8em;
-	}
-
-	#news h2:before {
-		left: 40%;
-	}
-	#news ul {
-		width: 80%;
-		margin: auto;
-		margin-top: 100px;
-	}
-	#news ul li {
-		width: 100%;
-		margin: 0px 0px 20px 0px;
-	}
-	#news img {
-		height: 330px;
-		margin: 0px;
-
-	}
-									/***End S4 - news & articles***/
-									/***S5 - coffees and teas***/
-
-	#coffees-and-teas {
-		padding: 80px 10px 30px 10px;
-		height: 350px;
-	}
-	#coffees-and-teas h3 {
-
-	}
-	.tea-leaf {
-		margin-bottom: 20px;
-	}
-
-									/***End S5 - coffees and teas***/
-									/***S6 - success stories***/
-
-	#success-stories {
-		margin: auto;
-		width: 90%;
-		height: 700px;
-	}
-
-	#success-stories h2 {
-		font-size: 1.8em;
-		margin-top: 10px;
-	}
-	#success-stories h2:before {
-		left: 40%;
-	}
-
-	#before-container {
-	top: 0px;
-	left: 0px;
-	float: left;
-	padding: 10px;
-	border: 1px solid lightgrey;
-	background-color: white;
-	position: initial;
-	z-index: initial;
-	width: 40%;
-	margin-top: 100px;
-	}
-
-
-	#after-container {
-	margin-left: 0px;
-	margin-top: 100px;
-	padding: 10px;
-	border: 1px solid lightgrey;
-	background-color: white;
-	display: inline-block;
-	float: right;
-	width: 40%;
-	}
-
-	#success-stories img {
-		display: block;
-		margin: auto;
-	}
-
-	#success-stories-text {
-	display: inline-block;
-	text-align: center;
-	float: none;
-	width: 95%;
-	margin-top: 50px;
-	margin-left: 0px;
-	}
-	#success-stories p {
-	color: #444444;
-	font-family: "Open Sans", sans-serif;
-	font-size: 14px;
-	padding-top: 10px;
-	}
-	#success-stories h4 a {
-	text-decoration: none;
-	color: #2acd35;
-	font-family: "Open Sans", sans-serif;
-	}
-
-									/***End S6 - success stories***/
-									/***S7 - form***/
-
-	#form {
-	margin-top: 40px;
-	background-image: url("http://healthcoach.stylemixthemes.com/wp-content/uploads/2015/08/Untitled-2_02-min.jpg?id=1838");
-	background-size: cover;
-	background-repeat: no-repeat;
-	text-align: center;
-	padding-top: 50px;
-	margin-bottom: 30px;
-	height: 707px;
-	}
-
-	form {
-	border: 1px solid white;
-	border-radius: 8px;
-	background-color: white;
-	width: 95%;
-	margin: auto;
-	padding-top: 15px;
-	margin-bottom: 0px;
-	}
-	.personal-info {
-	width: 87%;
-	padding: 10px;
-	margin: 10px;
-	border: 2px solid lightgrey;
-	}
-	.contact-text {
-	width: 90%;
-	border: 2px solid lightgrey;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	}
-	.submit-button {
-		margin-bottom: 40px;
-	}
-
-									/***End S7 - form***/
-									/***footer***/
-
-	footer {
-		margin-top: 0px;
-	}
-	#shop {
-		width: 95%;
-	}
-	#shop img {
-		display: none;
-	}
-	#shop p {
-		font-size: 16px;
-		font-weight: 100;
-	}
-	.shop-wrapper {
-		width: 95%;
-		margin: auto;
-		margin-top: 40px;
-	}
-	#about-us, #find-us, #pages, #instagram {
-		display: inline-block;
-		width: 100%;
-		text-align: left;
-		padding-right: 0px;
-		padding-bottom: 0px;
-	}
-	.fa-twitter, .fa-facebook-square, .fa-instagram {
-		padding-top: 30px;
-		font-size: 1.8em!important;
-	}
-	#pages li {
-		padding-bottom: 10px;
-	}
-	.info {
-		padding: 0px;
-		margin: 0px;
-		text-align: left;
-	}
-	.info p {
-		display: block;
-		padding: 20px 0px 20px 10px;
-	}
-	#copy {
-		padding-right: 0%;
-		padding-bottom: 0px;
-	}
-}
-									/***End of footer***/
- 									/***End of media 600px***/
-
-
-
-									/***media 320-480px***/
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-
-									/***header***/
-
-	header {
-		background-size: cover;
-		height: 200px;
-	}
-
-	#logo {
-		width: 25%;
-		margin-left: 20px;
-		padding-left: 0px
-	}
-
-	nav {
-		display: none;
-	}
-
-	#burger {
-		display: block;
-		float: right;
-		text-decoration: none;
-		color: white;
-		margin-right: 15px;
-		margin-top: 15px;
-
+	#introduction h1 {
+		font-size: 45px;
+		left: 50%;
 	}
 	#headerimg {
-		margin-left: -50px;
-		margin-top: 10px;
+		width: 90%;
+		position: absolute;
+		left: -15%;
+		top: 25%;
 	}
-
-	#introduction {
+	.nav-wrap {
+		width: 100%;
+		background-color: #ffffff;
+		height: 80px;
+		padding-top: 15px;
+	}
+	#logo-white{
 		display: none;
 	}
-
-									/***End of header***/
-									/***S1 - why health coach***/
-
-	#why-health-coach {
-	height: 1070px;
-	position: relative;
-	margin-top: 0px;
+	#logo-black {
+		display: block;
+		width: 20%;
+		float: left;
+		margin-left: 15px;
 	}
+}
 
-	#why-health-coach h2 {
-	text-align: center;
-	font-family: "Oregano";
-	font-weight: 400;
-	font-size: 1.5em;
-	position: relative;
-	z-index: 100;
-	margin-top: 5px;
-	}
-	#why-health-coach h2:before {
-	content: " ";
-	width: 80px;
-	height: 80px;
-	display: block;
-	border-radius: 50%;
-	background-color: white;
-	border: 1px solid white;
-	border-bottom: 2px solid #2acd35;
-	position: absolute;
-	top: -95%;
-	left: 38%;
-	z-index: -100;
-	}
-
-
-	#lista {
-	height: 150px;
-	padding-top: 40px;
-	position: absolute;
-	transform: translate(0%, 0%);  /* Standard syntax */
-   -ms-transform: translate(0%, 0%); /* IE 9 */
-   -webkit-transform: translate(0%, 0%); /* Safari */
-   	padding-bottom: 20px;
+@media screen and (max-width: 986px) {
+	#introduction a {
+		font-size: 12px;
+		font-weight: 100;
+		padding: 7px 25px;
+		border: 1px solid white;
 	}
 	#lista li {
-	display: block;
-	width: 80%;
-	text-align: center;
-
-	border: 1px solid gray;
-	margin: 0px 0px 20px 0px;
-	padding: 20px 20px;
-	margin: auto;
-	margin-bottom: 20px;
+		width: 40%;
+		margin: 15px 20px;
 	}
-	#why-health-coach h4 {
-	font-family: "Open Sans", sans-serif;
-	font-weight: 400;
-	font-size: 14px;
-	padding-bottom: 20px;
-	color: #444444;
-	}
-	
-	.whc-icon {
-	color: #2acd35;
-	font-size: 4em;
-	padding: 20px 0px 40px 0px;
-	}*/
-
-	#section1-ending {
-	display: block;
-	text-align: center;
-	font-family: "Open Sans", sans-serif;
-	color: gray;
-	padding-bottom: 40px;
-	font-size: 13px;
-	width: 90%;
-	margin: auto;
-	}
-									/***End S1 why health coach***/
-									/***S2 - don't wait tomorrow***/
-
-	#not-tomorrow {
-	margin-top: 10px;
-	padding-bottom: 60px;
-	height: 950px;
-	}
-
-	#not-tomorrow h2 {
-	font-size: 1.5em;
-	margin: 0px;
-	padding: 5px 0px 0px 0px;
-	}
-
-	#not-tomorrow h2:before {
-	content: " ";
-	width: 80px;
-	height: 80px;
-	display: block;
-	border-radius: 50%;
-	background-color: #f5f4f3;
-	border: 1px solid #f5f4f3;
-	border-bottom: 2px solid #2acd35;
-	position: absolute;
-	top: -60%;
-	left: 38%;
-	z-index: -100;
-	}
-
-	.not-tomorrow-img {
-	width: 100%;
-	margin: 0px;
-	}
-
-	.not-tomorrow-icon {
-	padding-bottom: 10px;
-	color: #2acd35;
-	}
-
-	#not-tomorrow ul {
-	text-align: center;
-	width: 100%;
-	margin: 40px 0px 0px 0px;
-	position: absolute;
-	transform: translate(0%, 0%);  /* Standard syntax */
-   -ms-transform: translate(0%, 0%); /* IE 9 */
-   -webkit-transform: translate(0%, 0%); /* Safari */
-	}
-
 	#not-tomorrow ul li {
-	display: block;
-	width: 80%;
-	border-bottom: 2px solid lightgrey;
-	text-align: center;
-	margin: auto;
-	margin-bottom: 20px;
+		width: 100%;
+		margin: 10px;
 	}
-
-									/***End S2 - don't wait tomorrow***/
-									/***S3 - 3 months***/
-
-	#months {
-		background-attachment: initial;
-		padding: 50px 0px 0px 15px;
-		background-position: center center;
-		height: 250px;
-		margin-bottom: 0px;
-
+	#not-tomorrow h4 {
+		font-size: 16px;
 	}
-
-	#months h3 {
-		font-size: 1.7em;
-	}
-	#months p {
-		font-size: 0.9em;
-		color: white;
-		font-weight: 580;
-	}
-
-	#months a {
-	
-	font-size: 0.9em;
-	font-weight: bold;
-	padding: 10px 20px;
-	border: 2px solid white;
-	border-radius: 30px;
-	}
-
-									/***End S3 - 3 months***/
-									/***S4 - news & articles***/
-	
-	#news h2 {
-		font-size: 1.5em;
-		margin-top: 5px;
-	}
-
-	#news h2:before {
-	content: "  ";
-	width: 80px;
-	height: 80px;
-	display: block;
-	border: 1px solid white;
-	border-radius: 50%;
-	background-color: white;
-	position: absolute;
-	top: -75%;
-	left: 38%;
-	z-index: -100;
-	border-bottom: 2px solid #2acd35;
-	}
-
-	#news ul {
-	width: 100%;
-	margin-left: 0px;
-	}
-
 	#news ul li {
-	display: block;
-	float: initial;
-	width: 80%;
-	text-align: center;
-	margin: auto;
-	margin-bottom: 20px;
-	border-bottom: 1px solid lightgrey;
+		width: 45%;
 	}
-
-	#news h4 a {
-		font-size: 0.9em;
-	}
-
 	#news img {
-		width: 98%;
 		height: 220px;
 	}
-
-	.info-over-image {
-	background-color: white;
-	/*position: relative;*/
-	margin-top: -60px;
-	padding: 20px;
+	#after {
+		left: 20%;
 	}
-
-
-									/*End S4 - news & articles***/
-									/***S5 - coffees and teas***/
-
-	#coffees-and-teas {
-		background-position: center center;
-		padding: 50px 20px 50px 20px;
-	}
-	.tea-leaf {
-		margin-bottom: 30px;
-	}
-	#coffees-and-teas h3 {
-		font-size: 2.1em;
-	}
-
-	#coffees-and-teas p {
-		padding-top: 5px;
-	}
-
-									/***End S5 - coffees and teas***/
-									/***S6 - success stories***/
-
-	#success-stories {
-		width: 65%;
-		display: block;
-		margin: auto;
-		margin-top: 40px;
-	}
-
-	#success-stories h2 {
-		font-size: 1.5em;
-	}
-
-	#success-stories h2:before {
-		width: 80px;
-		height: 80px;
-		top: -80%;
-		left: 38%;
-	}
-
-
-	#before-container {
-		position: initial;
-		display: inline-block;
-		margin: auto;
-		padding: 10px;
-		margin-top: 50px;
-		text-align: center;
-	}
-
-	#after-container {
-		display: inline-block;
-		margin: auto;
-		margin-top: 20px;
-		padding: 10px;
-		text-align: center;
-	}
-
-	.spantext {
-		padding-left: 0%;
-	}
-
 	#success-stories-text {
-		float: none;
-		margin: auto;
-		text-align: center;
-		width: 90%;
+		width: 40%;
+	}
+	input[type='text'] {
+		width: 100%;
 		padding: 10px;
-		margin-top: 30px;
-	}
-	#success-stories p {
-		font-size: 0.7em;
-	}
-								/***End S6 - success stories***/
-								/***S7 - form***/
-
-	#form {
-		background-size: cover;
-	}
-	#form p {
 		margin-bottom: 20px;
+		border: 2px solid lightgrey;
+		outline: none;
 	}
-	.personal-info {
-		width: 85%;
-		margin: 0px;
-		margin-bottom: 20px;
+	input[type='text']:nth-child(1), 
+	input[type='text']:nth-child(3) {
+		float: none;
 	}
-	.contact-text {
-		width: 90%;
+	#about-us, #find-us, #pages, #instagram {
+		width: 45%;
 	}
-									/***End S7 - form***/
-									/***footer***/
-	footer {
-		/*margin-top: 0px;*/
-	}
-	#shop {
-		width: 95%;
+	#shop, .shop-wrapper, .info-wrap {
+		width: 80%;
 	}
 	#shop img {
 		display: none;
 	}
-	.shop-wrapper {
+}
+
+@media screen and (max-width: 768px) {
+	#lista li {
+		width: 100%;
+		margin: 10px 0px;
+	}
+	#not-tomorrow ul li {
+		margin: 10px 0px;
+	}
+	#news ul {
 		width: 90%;
+	}
+	#news ul li {
+		width: 100%;
+		margin: 10px 0px;
+	}
+	#news ul li img {
+		height: auto;
+	}
+	#success-stories-imgs {
+		width: 90%;
+		margin: 60px auto 0;
+		float: none;
+		left: 0;
+	}
+	#success-stories-imgs img {
+		width: 100%;
+	}
+	#before {
+		position: static;
+		width: 45%;
+		display: inline-block;
+	}
+	#after {
+		position: static;
+		left: 0;
+		top: 0;
+		width: 45%;
+		display: inline-block;
+		float: right;
+	}
+	#success-stories-text {
+		display: block;
+		float: none;
+		width: 90%;
+		margin: 30px auto;
+		text-align: center;
 	}
 	#about-us, #find-us, #pages, #instagram {
 		width: 90%;
 	}
-	.fa-twitter, .fa-facebook-square, .fa-instagram {
-		padding-top: 30px;
-		font-size: 1.8em!important;
-	}
-	#pages li {
-		padding-bottom: 10px;
+	#shop, .shop-wrapper, .info-wrap {
+		width: 90%;
 	}
 	.info {
-		padding: 0px;
-		margin: 0px;
-		text-align: left;
+		padding: 30px 0px;
 	}
 	.info p {
 		display: block;
-		padding: 20px 0px 20px 10px;
+		padding: 5px 0px;
 	}
-	#copy {
-		padding-right: 0%;
-		padding-bottom: 0px;
+	.info p:nth-child(2){
+		float: none;
 	}
-} 
-								/***End of media 320-480***/
+}
+
+@media screen and (max-width: 640px) {
+	header {
+		height: 60vh;
+	}
+	#introduction {
+		margin-top: -25px;
+	}
+	#introduction h1 {
+		font-size: 35px;
+	}
+	#introduction p {
+		font-size: 12px;
+	}
+	#introduction a {
+		font-size: 10px;
+	}
+	#headerimg {
+		left: -15%;
+		top: 40%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	#introduction {
+		margin-top: -45px;
+		margin-left: -20px;
+	}
+	#headerimg {
+		left: -20%;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	#introduction h1 {
+		font-size: 25px;
+	}
+	#introduction p {
+		font-size: 10px;
+	}
+	#introduction a {
+		padding: 5px 8px;
+	}
+	#why-health-coach h2:before {
+		top: -40%;
+	}
+}
